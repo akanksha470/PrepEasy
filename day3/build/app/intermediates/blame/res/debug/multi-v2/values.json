@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/akanksha/flutter_onboarding_ui/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "C:\\Users\\rajat\\Desktop\\PrepEasy\\day3\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "/home/akanksha/.gradle/caches/transforms-2/files-2.1/bb9f4fc7c2837321c2ce4511cfad5506/core-1.1.0/res/values/values.xml",
+                    "source": "C:\\Users\\rajat\\.gradle\\caches\\transforms-2\\files-2.1\\bb9f4fc7c2837321c2ce4511cfad5506\\core-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,83,84,88,89,90,91,98,141,173,210",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/akanksha/.gradle/caches/transforms-2/files-2.1/0d412342b552e9ca3a1a0c992f1154ec/jetified-play-services-basement-17.0.0/res/values/values.xml",
+                    "source": "C:\\Users\\rajat\\.gradle\\caches\\transforms-2\\files-2.1\\fce2d35c00950be1dce0ad28882c6aab\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,7",
                         "startColumns": "0,0",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "/home/akanksha/.gradle/caches/transforms-2/files-2.1/0c94ba41ce20510b7611d2ec2e678916/play-services-base-17.1.0/res/values/values.xml",
+                    "source": "C:\\Users\\rajat\\.gradle\\caches\\transforms-2\\files-2.1\\0c94ba41ce20510b7611d2ec2e678916\\play-services-base-17.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,33,46",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -59,7 +59,7 @@
                     }
                 },
                 {
-                    "source": "/home/akanksha/flutter_onboarding_ui/android/app/src/main/res/values/styles.xml",
+                    "source": "C:\\Users\\rajat\\Desktop\\PrepEasy\\day3\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -78,7 +78,7 @@
                     }
                 },
                 {
-                    "source": "/home/akanksha/flutter_onboarding_ui/build/app/generated/res/google-services/debug/values/values.xml",
+                    "source": "C:\\Users\\rajat\\Desktop\\PrepEasy\\day3\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
