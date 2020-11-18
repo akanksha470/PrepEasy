@@ -163,17 +163,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   image: AssetImage(
                                     'assets/images/onboarding1.png',
                                   ),
-                                  height: 250.0,
+                                  height: 300.0,
                                   width: 300.0,
                                 ),
                               ),
+                              SizedBox(height: 10.0),
                               Center(
                                 child: Text(
                                   'Wanna analyse\nyourself?',
                                   style: kTitleStyle, textAlign: TextAlign.center,
                                 ),
                               ),
-                              SizedBox(height: 2.0),
+                         //     SizedBox(height: 15.0),
                               Text(
                                 'Take a test of whichever topic you feel like.',
                                 style: kSubtitleStyle, textAlign: TextAlign.center,
@@ -191,17 +192,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   image: AssetImage(
                                     'assets/images/onboarding2.png',
                                   ),
-                                  height: 250.0,
+                                  height: 300.0,
                                   width: 300.0,
                                 ),
                               ),
+                              SizedBox(height: 10.0),
                               Center(
                                 child: Text(
                                   'Forget the important\npoints when needed?',
                                   style: kTitleStyle, textAlign: TextAlign.center,
                                 ),
                               ),
-                              SizedBox(height: 2.0),
+                              //SizedBox(height: 15.0),
                               Text(
                                 'Note it down in the notes section and bookmark the interesting problems',
                                 style: kSubtitleStyle, textAlign: TextAlign.center,

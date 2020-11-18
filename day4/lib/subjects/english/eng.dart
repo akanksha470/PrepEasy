@@ -1,9 +1,8 @@
+import 'package:flutter_onboarding_ui/screens/onboarding_screen.dart';
 import 'package:flutter_onboarding_ui/screens/screen1.dart';
 import 'package:flutter_onboarding_ui/services/localData.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_ui/screens/signin.dart';
 import 'package:flutter_onboarding_ui/subjects/english/antonym.dart';
-import 'package:flutter_onboarding_ui/screens/onboarding_screen.dart';
 
 
 class englishScreen extends StatefulWidget {
@@ -25,12 +24,12 @@ class _englishScreenState extends State<englishScreen> {
       FlatButton(
         child: Text("Yes"),
         onPressed: () async {
-            Navigator.of(context, rootNavigator: true).pop();
-            await localData.saveUserLoggedIn(false);
-            await localData.saveUserName(null);
-            await localData.saveUserEmail(null);
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
-          },
+          Navigator.of(context, rootNavigator: true).pop();
+          await localData.saveUserLoggedIn(false);
+          await localData.saveUserName(null);
+          await localData.saveUserEmail(null);
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
+        },
       ),
       FlatButton(
         child: Text("No"),

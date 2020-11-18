@@ -1,8 +1,7 @@
+import 'package:flutter_onboarding_ui/screens/onboarding_screen.dart';
 import 'package:flutter_onboarding_ui/screens/screen1.dart';
 import 'package:flutter_onboarding_ui/services/localData.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_ui/screens/signin.dart';
-import 'package:flutter_onboarding_ui/screens/onboarding_screen.dart';
 
 class TechScreen extends StatefulWidget {
   @override
@@ -63,20 +62,11 @@ class _TechScreenState extends State<TechScreen> {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor: Color(0xFF071A3F),
-//          leading: Icon(
-//            Icons.dehaze,
-//            color: Colors.white,
-//          ),
-
             title: Text('QUANTITATIVE'),
-          ),
+            ),
           body: BodyLayout(),
           drawer: Drawer(
-            // Add a ListView to the drawer. This ensures the user can scroll
-            // through the options in the drawer if there isn't enough vertical
-            // space to fit everything.
             child: ListView(
-              // Important: Remove any padding from the ListView.
               padding: EdgeInsets.zero,
               children: <Widget>[
                 DrawerHeader(
@@ -93,7 +83,7 @@ class _TechScreenState extends State<TechScreen> {
                     ),
                   ),
                   decoration: BoxDecoration(
-                    color: Color(0xFF071A3F),
+                    color: Color(0xFFEB5FA9),
                   ),
                 ),
                 SizedBox(height: 20,),

@@ -1,7 +1,7 @@
-import 'dart:convert';
-
-import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter_onboarding_ui/model/data.dart';
 
 class EnglishAntonym extends StatefulWidget {
   @override
@@ -10,35 +10,104 @@ class EnglishAntonym extends StatefulWidget {
 
 class _EnglishAntonymState extends State<EnglishAntonym> {
 
-//  final List<Country> country;
-//  CountyList({Key key, this.country}) : super(key: key);
+  DatabaseReference referenceData = FirebaseDatabase.instance.reference().child(
+      'english').child('antonyms');
+  FirebaseAuth auth = FirebaseAuth.instance;
+  List<Data> _dataList = List<Data>();
+  List<bool> favList = [];
+  bool isLoading;
+  var i;
+
+  getData() async {
+    setState(() {
+      isLoading = true;
+      favList.clear();
+      _dataList.clear();
+    });
+    //_dataList = List<Data>();
+    await referenceData.once().then((DataSnapshot snapshot) async {
+      print("Snap :  ${snapshot.value}");
+      print("length: ${snapshot.value.length}");
+
+      var len = snapshot.value.length;
+
+      for (i = 0; i < len; i++) {
+        var dataModel = Data();
+        dataModel.id = snapshot.value[i]['id'];
+        dataModel.ques = snapshot.value[i]['question'];
+        dataModel.ans = snapshot.value[i]['answer'];
+        dataModel.options = snapshot.value[i]['options'];
+
+        _dataList.add(dataModel);
+
+        await auth.currentUser().then((value) async {
+          DatabaseReference reference = await FirebaseDatabase.instance
+              .reference().child('english').child('antonyms')
+              .child(_dataList[i].id).child('fav').child(value.uid).child(
+              'state');
+
+          await reference.once().then((DataSnapshot snapshot) {
+            print("snapy : ${snapshot.value}");
+            if (snapshot.value != null) {
+              if (snapshot.value == true) {
+                favList.add(true);
+              }
+              else {
+                favList.add(false);
+              }
+            } else {
+              favList.add(false);
+            }
+          });
+        });
+      }
+      setState(() {
+        isLoading = false;
+      });
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    i = 0;
+    getData();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: FutureBuilder(
-          future: DefaultAssetBundle.of(context).loadString('assets/questions.json'),
-            builder: (context, snapshot){
-            var data = json.decode(snapshot.data.toString());
-            print("data: $data");
-            return ListView.builder(
-                itemCount: data == null ? 0 : data["english"]['antonyms'].length,
-                itemBuilder: (BuildContext context, int index){
-                  return Card(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        Text("Ques: " + data['english']['antonyms'][index]['question']),
-                        Text("Ans: " + data['english']['antonyms'][index]['answer'])
-                        //Text("Ans: " + data[index]['english']['antonyms']['answer']),
-                      ],
-                    ),
-                  );
-                });
-            },
-        ),
-      ),
+    return Scaffold(
+      body: !isLoading ? ListView.builder(
+          itemCount: _dataList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+                title: Text(_dataList[index].ques),
+                subtitle: Text(_dataList[index].ans),
+                trailing:
+                GestureDetector(
+                  child: favList[index]
+                      ? Icon(Icons.star, color: Colors.yellow)
+                      :
+                  Icon(Icons.star_border),
+                  onTap: () async {
+                    await auth.currentUser().then((value) {
+                      DatabaseReference favRef = FirebaseDatabase.instance
+                          .reference().child('english').child('antonyms')
+                          .child(_dataList[index].id).child('fav').child(
+                          value.uid).child('state');
+
+                      favList[index] == true ? favRef.set(false) : favRef.set(
+                          true);
+                    });
+                    setState(() {
+                      favList[index] = !favList[index];
+                    });
+                  },)
+            );
+          })
+          : Center(child: CircularProgressIndicator(),),
     );
   }
 }
+

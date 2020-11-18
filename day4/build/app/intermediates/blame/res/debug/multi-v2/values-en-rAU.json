@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\rajat\\Desktop\\PrepEasy\\day4\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "outputFile": "/home/akanksha/flutter_onboarding_ui/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rajat\\.gradle\\caches\\transforms-2\\files-2.1\\bb9f4fc7c2837321c2ce4511cfad5506\\core-1.1.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "/home/akanksha/.gradle/caches/transforms-2/files-2.1/bb9f4fc7c2837321c2ce4511cfad5506/core-1.1.0/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

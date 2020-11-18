@@ -1,8 +1,8 @@
+import 'package:flutter_onboarding_ui/screens/onboarding_screen.dart';
 import 'package:flutter_onboarding_ui/screens/screen1.dart';
 import 'package:flutter_onboarding_ui/services/localData.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_ui/screens/signin.dart';
-import 'package:flutter_onboarding_ui/screens/onboarding_screen.dart';
 
 class ReasonScreen extends StatefulWidget {
   @override
@@ -70,7 +70,7 @@ class _ReasonScreenState extends State<ReasonScreen> {
 //          ),
 
             title: Text('LOGICAL REASONING'),
-          ),
+            ),
           body: BodyLayout(),
           drawer: Drawer(
             // Add a ListView to the drawer. This ensures the user can scroll
@@ -94,7 +94,7 @@ class _ReasonScreenState extends State<ReasonScreen> {
                     ),
                   ),
                   decoration: BoxDecoration(
-                    color: Color(0xFF071A3F),
+                    color: Color(0xFFEB5FA9),
                   ),
                 ),
                 SizedBox(height: 20,),
