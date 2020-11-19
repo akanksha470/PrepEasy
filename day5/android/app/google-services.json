@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "7376884370",
+    "firebase_url": "https://prepeasy-3beca.firebaseio.com",
+    "project_id": "prepeasy-3beca",
+    "storage_bucket": "prepeasy-3beca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7376884370:android:f998079e48d88269474c4b",
+        "android_client_info": {
+          "package_name": "com.example.flutter_onboarding_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7376884370-ejrv0l80qrbk257eqegafdptfd34enco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVVJTcXgEPw5ord2xiDIdTi8uGU9-spw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7376884370-ejrv0l80qrbk257eqegafdptfd34enco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

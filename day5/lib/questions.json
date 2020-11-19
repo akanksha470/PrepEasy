@@ -1,0 +1,21 @@
+{
+    "english": {
+    	"antonyms": [
+    		{
+    		    "id": "1",
+    		    "question": "Antonym of word enormous",
+    		    "answer": "Enormous",
+    		    "options": ["Soft", "Average", "Tiny", "Weak"]
+    		},
+    		
+    		{
+    		    "id": "2",
+    		    "question": "Antonym of word Commissioned",
+    		    "answer": "Terminated",
+    		    "options": ["Started", "Closed", "Finished", "Terminated"]
+    		}
+    	    ]
+    }
+}
+    
+    	
